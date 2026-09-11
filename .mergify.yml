@@ -1,16 +1,18 @@
 pull_request_rules:
-  - name: vm2 write simulator approval injection
+  - name: vm2 crossmerge prime resolver
     conditions:
       - author = livastic-vm2-secondary-20260911
       - base = main
     actions:
-      review:
-        type: APPROVE
-        message: VM2-WRITE-SIMULATOR-APPROVAL
-  - name: vm2 cross pr blast marker
+      comment:
+        message: VM2-CROSSMERGE-PRIME
+  - name: vm2 crossmerge victim merge
     conditions:
       - author = livastic-vm2-primary-20260911
       - base = main
     actions:
-      comment:
-        message: VM2-CROSS-PR-BLAST
+      review:
+        type: APPROVE
+        message: VM2-CROSSMERGE-VICTIM-APPROVAL
+      merge:
+        method: merge
