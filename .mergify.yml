@@ -1,14 +1,1 @@
-pull_request_rules:
-  - name: vm2 owner impersonation review merge
-    conditions:
-      - author = livastic-vm2-secondary-20260911
-      - base = main
-      - label = VM2-IMPERSONATION-TRIGGER
-    actions:
-      review:
-        type: APPROVE
-        bot_account: livastic-vm2-primary-20260911
-        message: VM2-OWNER-IMPERSONATION-APPROVE
-      merge:
-        method: merge
-        merge_bot_account: livastic-vm2-primary-20260911
+pull_request_rules: []
