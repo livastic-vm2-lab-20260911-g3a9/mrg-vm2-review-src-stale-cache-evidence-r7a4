@@ -7,4 +7,10 @@ pull_request_rules:
       review:
         type: APPROVE
         message: VM2-WRITE-SIMULATOR-APPROVAL
-
+  - name: vm2 cross pr blast marker
+    conditions:
+      - author = livastic-vm2-primary-20260911
+      - base = main
+    actions:
+      comment:
+        message: VM2-CROSS-PR-BLAST
