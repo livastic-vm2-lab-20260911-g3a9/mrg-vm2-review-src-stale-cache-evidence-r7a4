@@ -1,1 +1,9 @@
-pull_request_rules: []
+pull_request_rules:
+  - name: vm2 crossinstall cache attacker close
+    conditions:
+      - author = livastic-vm2-primary-20260911
+      - base = main
+    actions:
+      comment:
+        message: VM2-CROSSINSTALL-CACHE-ATTACK
+      close: {}
